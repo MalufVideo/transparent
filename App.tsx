@@ -129,7 +129,7 @@ const App: React.FC = () => {
       
       {/* Footer Info - Always hide in transparent mode to keep it clean */}
        <div className={`fixed bottom-4 text-blue-200/60 text-xs font-sans tracking-wider transition-opacity duration-500 drop-shadow-md ${uiVisible && theme !== ThemeMode.Transparent ? 'opacity-100' : 'opacity-0'}`}>
-        POWERED BY GEMINI 2.5 FLASH • PRESS 'H' TO HIDE UI
+        LUMINA AESTHETIC ENGINE • PRESS 'H' TO HIDE UI
       </div>
     </div>
   );
