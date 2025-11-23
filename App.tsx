@@ -76,16 +76,16 @@ const App: React.FC = () => {
 
         {loading ? (
           <div className="h-48 flex flex-col items-center justify-center space-y-4 animate-fade-in">
-             <div className="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-             <p className="text-white/60 font-sans text-sm tracking-widest uppercase shadow-black/50 drop-shadow-md">Dreaming...</p>
+             <div className="w-12 h-12 border-4 border-blue-200/30 border-t-blue-300 rounded-full animate-spin"></div>
+             <p className="text-blue-200/80 font-sans text-sm tracking-widest uppercase shadow-black/50 drop-shadow-md">Dreaming...</p>
           </div>
         ) : (
           <div className="animate-fade-in min-h-[12rem] flex flex-col justify-center">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-blue-300 leading-tight mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                "{data?.text}"
              </h1>
              {data?.author && (
-               <p className="font-sans text-white/90 text-lg tracking-wide uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+               <p className="font-sans text-blue-200 text-lg tracking-wide uppercase font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                  — {data.author}
                </p>
              )}
@@ -104,21 +104,21 @@ const App: React.FC = () => {
           <div className="flex bg-black/40 rounded-full p-1 border border-white/20 backdrop-blur-md">
             <button
               onClick={() => setTheme(ThemeMode.Gradient)}
-              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Gradient ? 'bg-white/20 text-white shadow-sm' : 'text-white/70 hover:text-white'}`}
+              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Gradient ? 'bg-white/20 text-blue-200 shadow-sm' : 'text-white/70 hover:text-blue-200'}`}
               title="Gradient Mode"
             >
               <Maximize2 size={16} />
             </button>
             <button
               onClick={() => setTheme(ThemeMode.Dark)}
-              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Dark ? 'bg-white/20 text-white shadow-sm' : 'text-white/70 hover:text-white'}`}
+              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Dark ? 'bg-white/20 text-blue-200 shadow-sm' : 'text-white/70 hover:text-blue-200'}`}
               title="Dark Mode"
             >
                <Minimize2 size={16} />
             </button>
             <button
               onClick={() => setTheme(ThemeMode.Transparent)}
-              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Transparent ? 'bg-white/20 text-white shadow-sm' : 'text-white/70 hover:text-white'}`}
+              className={`p-2 rounded-full transition-all ${theme === ThemeMode.Transparent ? 'bg-white/20 text-blue-200 shadow-sm' : 'text-white/70 hover:text-blue-200'}`}
               title="Transparent Overlay Mode"
             >
                <Layout size={16} />
@@ -128,7 +128,7 @@ const App: React.FC = () => {
       </GlassCard>
       
       {/* Footer Info - Always hide in transparent mode to keep it clean */}
-       <div className={`fixed bottom-4 text-white/60 text-xs font-sans tracking-wider transition-opacity duration-500 drop-shadow-md ${uiVisible && theme !== ThemeMode.Transparent ? 'opacity-100' : 'opacity-0'}`}>
+       <div className={`fixed bottom-4 text-blue-200/60 text-xs font-sans tracking-wider transition-opacity duration-500 drop-shadow-md ${uiVisible && theme !== ThemeMode.Transparent ? 'opacity-100' : 'opacity-0'}`}>
         POWERED BY GEMINI 2.5 FLASH • PRESS 'H' TO HIDE UI
       </div>
     </div>
